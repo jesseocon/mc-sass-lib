@@ -1,6 +1,6 @@
 {
   "name": "mc-sass-lib",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Sass library starter kit based on MasterClass design",
   "main": "build/index.js",
   "scripts": {
