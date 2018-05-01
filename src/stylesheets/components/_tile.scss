@@ -1,7 +1,20 @@
 .tile {
   overflow: hidden;
+  position: relative;
   cursor: pointer;
   backface-visibility: hidden; // Fixes any shakiness on CSS transition
+}
+
+.tile--with-gradient {
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #000, rgba(0,0,0,.75) 20%, rgba(0,0,0, 0) 40%);
+  }
 }
 
 .tile--hover-zoom {
@@ -18,14 +31,17 @@
   }
 }
 
-.tile--4x3 {
+.tile--4x3,
+.tile--video {
   @include aspect-ratio(4, 3);
 }
-.tile--16x9 {
+.tile--16x9,
+.tile--widescreen-video {
   @include aspect-ratio(16, 9);
 }
 
-.tile--1000x609 {
+.tile--1000x609,
+.tile--site {
   @include aspect-ratio(1000, 609)
 }
 .tile--519x187 {

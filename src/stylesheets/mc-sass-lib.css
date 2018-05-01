@@ -934,8 +934,18 @@ body {
 
 .tile {
   overflow: hidden;
+  position: relative;
   cursor: pointer;
   backface-visibility: hidden; }
+
+.tile--with-gradient:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.75) 20%, rgba(0, 0, 0, 0) 40%); }
 
 .tile--hover-zoom {
   overflow: inherit;
@@ -949,14 +959,18 @@ body {
   .tile--hover-zoom:hover {
     overflow: inherit; }
 
-.tile--4x3 {
-  position: relative; }
-  .tile--4x3:before {
+.tile--4x3,
+.tile--video {
+  position: relative;
+  /* Todo - Make sure this is deprecated and use fill instead */ }
+  .tile--4x3:before,
+  .tile--video:before {
     display: block;
     content: "";
     width: 100%;
     padding-top: 75%; }
-  .tile--4x3 > .background {
+  .tile--4x3 > .background,
+  .tile--video > .background {
     position: absolute;
     background-size: cover;
     background-repeat: cover;
@@ -965,7 +979,22 @@ body {
     left: 0;
     right: 0;
     bottom: 0; }
-  .tile--4x3 .content {
+  .tile--4x3 .fill,
+  .tile--video .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%; }
+    .tile--4x3 .fill:after,
+    .tile--video .fill:after {
+      content: " ";
+      position: relative;
+      width: 100%;
+      height: 100%; }
+  .tile--4x3 .content,
+  .tile--video .content {
     position: absolute;
     z-index: 2;
     top: 0;
@@ -973,14 +1002,18 @@ body {
     right: 0;
     bottom: 0; }
 
-.tile--16x9 {
-  position: relative; }
-  .tile--16x9:before {
+.tile--16x9,
+.tile--widescreen-video {
+  position: relative;
+  /* Todo - Make sure this is deprecated and use fill instead */ }
+  .tile--16x9:before,
+  .tile--widescreen-video:before {
     display: block;
     content: "";
     width: 100%;
     padding-top: 56.25%; }
-  .tile--16x9 > .background {
+  .tile--16x9 > .background,
+  .tile--widescreen-video > .background {
     position: absolute;
     background-size: cover;
     background-repeat: cover;
@@ -989,7 +1022,22 @@ body {
     left: 0;
     right: 0;
     bottom: 0; }
-  .tile--16x9 .content {
+  .tile--16x9 .fill,
+  .tile--widescreen-video .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%; }
+    .tile--16x9 .fill:after,
+    .tile--widescreen-video .fill:after {
+      content: " ";
+      position: relative;
+      width: 100%;
+      height: 100%; }
+  .tile--16x9 .content,
+  .tile--widescreen-video .content {
     position: absolute;
     z-index: 2;
     top: 0;
@@ -997,14 +1045,18 @@ body {
     right: 0;
     bottom: 0; }
 
-.tile--1000x609 {
-  position: relative; }
-  .tile--1000x609:before {
+.tile--1000x609,
+.tile--site {
+  position: relative;
+  /* Todo - Make sure this is deprecated and use fill instead */ }
+  .tile--1000x609:before,
+  .tile--site:before {
     display: block;
     content: "";
     width: 100%;
     padding-top: 60.9%; }
-  .tile--1000x609 > .background {
+  .tile--1000x609 > .background,
+  .tile--site > .background {
     position: absolute;
     background-size: cover;
     background-repeat: cover;
@@ -1013,7 +1065,22 @@ body {
     left: 0;
     right: 0;
     bottom: 0; }
-  .tile--1000x609 .content {
+  .tile--1000x609 .fill,
+  .tile--site .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%; }
+    .tile--1000x609 .fill:after,
+    .tile--site .fill:after {
+      content: " ";
+      position: relative;
+      width: 100%;
+      height: 100%; }
+  .tile--1000x609 .content,
+  .tile--site .content {
     position: absolute;
     z-index: 2;
     top: 0;
@@ -1022,7 +1089,8 @@ body {
     bottom: 0; }
 
 .tile--519x187 {
-  position: relative; }
+  position: relative;
+  /* Todo - Make sure this is deprecated and use fill instead */ }
   .tile--519x187:before {
     display: block;
     content: "";
@@ -1037,6 +1105,18 @@ body {
     left: 0;
     right: 0;
     bottom: 0; }
+  .tile--519x187 .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%; }
+    .tile--519x187 .fill:after {
+      content: " ";
+      position: relative;
+      width: 100%;
+      height: 100%; }
   .tile--519x187 .content {
     position: absolute;
     z-index: 2;
