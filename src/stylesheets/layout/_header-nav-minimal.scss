@@ -1,0 +1,12 @@
+.header-nav-minimal {
+  position: relative;
+  background-color: $black;
+  height: 3.3rem;
+
+  &__brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,17 @@
+.footer-minimal {
+  @include transition($transition-fade)
+  opacity: 1;
+  position: relative;
+  height: 10rem;
+
+  &__brand {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.inactive {
+    opacity: 0
+  }
+}

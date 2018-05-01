@@ -1,0 +1,33 @@
+.tile {
+  overflow: hidden;
+  cursor: pointer;
+  backface-visibility: hidden; // Fixes any shakiness on CSS transition
+}
+
+.tile--hover-zoom {
+  overflow: inherit;
+  @include transition($transition-base)
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 2px #D8D8D8;
+  }
+
+  &:hover {
+    overflow: inherit;
+  }
+}
+
+.tile--4x3 {
+  @include aspect-ratio(4, 3);
+}
+.tile--16x9 {
+  @include aspect-ratio(16, 9);
+}
+
+.tile--1000x609 {
+  @include aspect-ratio(1000, 609)
+}
+.tile--519x187 {
+  @include aspect-ratio(519, 187)
+}
