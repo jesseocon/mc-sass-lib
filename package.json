@@ -1,7 +1,7 @@
 {
-  "name": "create-react-library",
-  "version": "1.1.0",
-  "description": "React NPM library starter kit based on Facebook's create react app",
+  "name": "mc-sass-lib",
+  "version": "1.0",
+  "description": "Sass library starter kit based on MasterClass design",
   "main": "build/index.js",
   "scripts": {
     "start": "node scripts/start.js",
@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DimitriMikadze/create-react-library.git"
+    "url": "git@github.com:jesseocon/mc-sass-lib.git"
   },
   "author": "Jesse Ocon <jesse@masterclass.com>",
   "bugs": {
-    "url": "https://github.com/DimitriMikadze/create-react-library/issues"
+    "url": "https://github.com/jesseocon/mc-sass-lib/issues"
   },
-  "homepage": "https://github.com/DimitriMikadze/create-react-library#readme",
+  "homepage": "https://github.com/jesseocon/mc-sass-lib",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
