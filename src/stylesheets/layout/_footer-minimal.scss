@@ -1,8 +1,8 @@
 .footer-minimal {
-  @include transition($transition-fade)
-    opacity: 1;
+  @include transition($transition-fade);
   position: relative;
   height: 10rem;
+  opacity: 1;
 
   &__brand {
     position: absolute;
