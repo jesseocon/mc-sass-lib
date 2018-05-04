@@ -3,11 +3,11 @@
   font-weight: $btn-font-weight;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 2px;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   border: $btn-border-width solid transparent;
-  letter-spacing: 2px;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
@@ -46,10 +46,12 @@
 }
 
 // Future-proof disabling of clicks on `<a>` elements
+/* stylelint-disable */
 a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none;
 }
+/* stylelint-enable */
 
 
 //

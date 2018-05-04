@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { withInfo } from '@storybook/addon-info';
-import 'src/mc-sass-lib.css'
+import '../src/stylesheets/mc-sass-lib.css';
 
 import { Button, Welcome } from '@storybook/react/demo';
 
