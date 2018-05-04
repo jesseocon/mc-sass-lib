@@ -14,6 +14,7 @@ $primary: $red !default;
 $secondary: $gray-100 !default;
 $tertiary: $white !default;
 
+/* stylelint-disable */
 $theme-colors: () !default;
 $theme-colors: map-merge(
   (
@@ -22,7 +23,8 @@ $theme-colors: map-merge(
     "tertiary": $tertiary
   ),
   $theme-colors
-) !default;
+);
+/* stylelint-enable */
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
 
