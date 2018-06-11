@@ -33,6 +33,7 @@
     "stylelint-scss": "^3.1.0"
   },
   "devDependencies": {
+    "@masterclass/mastersass": "yankaindustries/mastersass",
     "@storybook/addon-actions": "^3.4.3",
     "@storybook/addon-info": "^3.4.3",
     "@storybook/addon-links": "^3.4.3",
